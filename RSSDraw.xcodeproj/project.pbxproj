@@ -13,6 +13,8 @@
 		72F2605F26A2C3B600C26BC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605E26A2C3B600C26BC6 /* main.m */; };
 		72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */; };
 		72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */; };
+		72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */; };
+		72F2608E26A2ED1F00C26BC6 /* DKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2608D26A2ED1F00C26BC6 /* DKButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKArtistViewController.m; sourceTree = "<group>"; };
 		72F2607E26A2CEA900C26BC6 /* DKDrawingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDrawingsViewController.h; sourceTree = "<group>"; };
 		72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDrawingsViewController.m; sourceTree = "<group>"; };
+		72F2608526A2E8CB00C26BC6 /* DKDrawingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDrawingsView.h; sourceTree = "<group>"; };
+		72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDrawingsView.m; sourceTree = "<group>"; };
+		72F2608C26A2ED1F00C26BC6 /* DKButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKButton.h; sourceTree = "<group>"; };
+		72F2608D26A2ED1F00C26BC6 /* DKButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,9 @@
 		72F2605226A2C3B400C26BC6 /* RSSDraw */ = {
 			isa = PBXGroup;
 			children = (
-				72F2607726A2CE3600C26BC6 /* New Group */,
+				72F2609026A2ED4900C26BC6 /* Models */,
+				72F2608926A2E8D500C26BC6 /* Views */,
+				72F2607726A2CE3600C26BC6 /* ViewControllers */,
 				72F2605326A2C3B400C26BC6 /* AppDelegate.h */,
 				72F2605426A2C3B400C26BC6 /* AppDelegate.m */,
 				72F2605826A2C3B600C26BC6 /* Assets.xcassets */,
@@ -70,7 +78,7 @@
 			path = RSSDraw;
 			sourceTree = "<group>";
 		};
-		72F2607726A2CE3600C26BC6 /* New Group */ = {
+		72F2607726A2CE3600C26BC6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				72F2606B26A2C82300C26BC6 /* DKArtistViewController.h */,
@@ -78,7 +86,25 @@
 				72F2607E26A2CEA900C26BC6 /* DKDrawingsViewController.h */,
 				72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */,
 			);
-			name = "New Group";
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72F2608926A2E8D500C26BC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72F2608526A2E8CB00C26BC6 /* DKDrawingsView.h */,
+				72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		72F2609026A2ED4900C26BC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72F2608C26A2ED1F00C26BC6 /* DKButton.h */,
+				72F2608D26A2ED1F00C26BC6 /* DKButton.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F2608E26A2ED1F00C26BC6 /* DKButton.m in Sources */,
+				72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */,
 				72F2605F26A2C3B600C26BC6 /* main.m in Sources */,
 				72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */,
 				72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */,
@@ -222,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
