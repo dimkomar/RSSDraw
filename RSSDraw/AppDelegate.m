@@ -6,6 +6,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DKArtistViewController.h"
+#import "DKDrawingsViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -15,11 +18,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor cyanColor];
-    self.window.rootViewController = [[UIViewController alloc] init];
+    
+    //create nc
+    UINavigationController *nc = [[UINavigationController alloc] init];
+
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+
+    //create root view controller
+    DKArtistViewController *artistViewController = [[DKArtistViewController alloc] init];
+
+    [nc setViewControllers:[NSArray arrayWithObject:artistViewController]];
+
+    [self.window setRootViewController:nc];
+            
 
     return YES;
 }

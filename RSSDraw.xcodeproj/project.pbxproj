@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		72F2605526A2C3B400C26BC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605426A2C3B400C26BC6 /* AppDelegate.m */; };
-		72F2605726A2C3B400C26BC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605626A2C3B400C26BC6 /* ContentView.swift */; };
 		72F2605926A2C3B600C26BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605826A2C3B600C26BC6 /* Assets.xcassets */; };
 		72F2605C26A2C3B600C26BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605A26A2C3B600C26BC6 /* LaunchScreen.storyboard */; };
 		72F2605F26A2C3B600C26BC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605E26A2C3B600C26BC6 /* main.m */; };
+		72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */; };
+		72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		72F2605026A2C3B400C26BC6 /* RSSDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F2605326A2C3B400C26BC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72F2605426A2C3B400C26BC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72F2605626A2C3B400C26BC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72F2605826A2C3B600C26BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72F2605B26A2C3B600C26BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72F2605D26A2C3B600C26BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F2605E26A2C3B600C26BC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72F2606B26A2C82300C26BC6 /* DKArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKArtistViewController.h; sourceTree = "<group>"; };
+		72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKArtistViewController.m; sourceTree = "<group>"; };
+		72F2607E26A2CEA900C26BC6 /* DKDrawingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDrawingsViewController.h; sourceTree = "<group>"; };
+		72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDrawingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +59,26 @@
 		72F2605226A2C3B400C26BC6 /* RSSDraw */ = {
 			isa = PBXGroup;
 			children = (
+				72F2607726A2CE3600C26BC6 /* New Group */,
 				72F2605326A2C3B400C26BC6 /* AppDelegate.h */,
 				72F2605426A2C3B400C26BC6 /* AppDelegate.m */,
-				72F2605626A2C3B400C26BC6 /* ContentView.swift */,
 				72F2605826A2C3B600C26BC6 /* Assets.xcassets */,
 				72F2605A26A2C3B600C26BC6 /* LaunchScreen.storyboard */,
 				72F2605D26A2C3B600C26BC6 /* Info.plist */,
 				72F2605E26A2C3B600C26BC6 /* main.m */,
 			);
 			path = RSSDraw;
+			sourceTree = "<group>";
+		};
+		72F2607726A2CE3600C26BC6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				72F2606B26A2C82300C26BC6 /* DKArtistViewController.h */,
+				72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */,
+				72F2607E26A2CEA900C26BC6 /* DKDrawingsViewController.h */,
+				72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72F2605726A2C3B400C26BC6 /* ContentView.swift in Sources */,
 				72F2605F26A2C3B600C26BC6 /* main.m in Sources */,
+				72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */,
+				72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */,
 				72F2605526A2C3B400C26BC6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
