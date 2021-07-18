@@ -6,6 +6,8 @@
 //
 
 #import "DKButton.h"
+#import "DKColor.h"
+
 
 @implementation DKButton
 
@@ -13,23 +15,30 @@
     self = [super init];
     if (self) {
         self.frame = CGRectMake(0, 0, 156, 42); //defaul size
-        [self.titleLabel setFont: [UIFont systemFontOfSize:20 weight:UIFontWeightSemibold]];
+        [self.titleLabel setFont: [UIFont fontWithName:@"Montserrat-Medium" size:18]];
         [self setTitle:title forState:UIControlStateNormal];
-        [self setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        self.layer.borderColor = [UIColor grayColor].CGColor;
-        self.layer.borderWidth = 2.0;
+        [self setTitleColor:[UIColor lightGreenSea] forState:UIControlStateNormal];
+        [self.layer setBackgroundColor:[[UIColor whiteColor] CGColor]];
+        [self.layer setShadowOpacity:1.0];
+        [self.layer setShadowColor:[[UIColor blackColor] CGColor]];
+        [self.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
+        [self.layer setShadowRadius:8.0];
+        [self.layer setShadowColor:[[UIColor blackColor] CGColor]];
+        [self.layer setShadowRadius:1.25];
+        [self.layer setShadowOpacity:0.2];
         self.layer.cornerRadius = 10.0;
+        self.contentEdgeInsets = UIEdgeInsetsMake(5, 21, 5, 21);
         [self clipsToBounds];
-        
-        // highlited state 
-        [self setTitleColor: [self.currentTitleColor colorWithAlphaComponent:0.4] forState:UIControlStateHighlighted];
+
+        //highlited state
+        //[self setTitleColor: [self.currentTitleColor colorWithAlphaComponent:0.4] forState:UIControlStateHighlighted];
     }
     return self;
 }
 
 -(void)setHighlighted:(BOOL)highlighted {
     
-    UIColor *color = [UIColor greenColor];
+    UIColor *color = [UIColor lightGreenSea];
     
     [super setHighlighted:highlighted];
     

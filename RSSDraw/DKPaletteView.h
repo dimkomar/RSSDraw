@@ -1,17 +1,18 @@
 //
-//  DKDrawingsView.h
+//  DKPaletteView.h
 //  RSSDraw
 //
-//  Created by Dmitriy Komar on 7/17/21.
+//  Created by Dmitriy Komar on 7/18/21.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DKDrawingsView : UIView
+@interface DKPaletteView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame;
+
 
 @end
 

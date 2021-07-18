@@ -1,5 +1,5 @@
 //
-//  DKDrawingsView.h
+//  UIColor.h
 //  RSSDraw
 //
 //  Created by Dmitriy Komar on 7/17/21.
@@ -9,9 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DKDrawingsView : UIView
-
-- (instancetype)initWithFrame:(CGRect)frame;
+@interface UIColor : UIColor
 
 @end
 

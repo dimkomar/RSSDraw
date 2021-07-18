@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72ADEBB126A4B1E900D1B8B8 /* DKPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */; };
 		72F2605526A2C3B400C26BC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605426A2C3B400C26BC6 /* AppDelegate.m */; };
 		72F2605926A2C3B600C26BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605826A2C3B600C26BC6 /* Assets.xcassets */; };
 		72F2605C26A2C3B600C26BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605A26A2C3B600C26BC6 /* LaunchScreen.storyboard */; };
@@ -15,9 +16,13 @@
 		72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */; };
 		72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */; };
 		72F2608E26A2ED1F00C26BC6 /* DKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2608D26A2ED1F00C26BC6 /* DKButton.m */; };
+		72F2609526A34E4600C26BC6 /* DKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2609426A34E4600C26BC6 /* DKColor.m */; };
+		72F260AC26A3987600C26BC6 /* DKModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F260AB26A3987600C26BC6 /* DKModalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72ADEBAF26A4B1E900D1B8B8 /* DKPaletteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPaletteView.h; sourceTree = "<group>"; };
+		72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPaletteView.m; sourceTree = "<group>"; };
 		72F2605026A2C3B400C26BC6 /* RSSDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F2605326A2C3B400C26BC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72F2605426A2C3B400C26BC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +38,12 @@
 		72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDrawingsView.m; sourceTree = "<group>"; };
 		72F2608C26A2ED1F00C26BC6 /* DKButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKButton.h; sourceTree = "<group>"; };
 		72F2608D26A2ED1F00C26BC6 /* DKButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKButton.m; sourceTree = "<group>"; };
+		72F2609326A34E4600C26BC6 /* DKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKColor.h; sourceTree = "<group>"; };
+		72F2609426A34E4600C26BC6 /* DKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKColor.m; sourceTree = "<group>"; };
+		72F260A026A3686400C26BC6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		72F260A126A3686400C26BC6 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		72F260AA26A3987600C26BC6 /* DKModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKModalViewController.h; sourceTree = "<group>"; };
+		72F260AB26A3987600C26BC6 /* DKModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,7 @@
 		72F2605226A2C3B400C26BC6 /* RSSDraw */ = {
 			isa = PBXGroup;
 			children = (
+				72F2609F26A3684C00C26BC6 /* Fonts */,
 				72F2609026A2ED4900C26BC6 /* Models */,
 				72F2608926A2E8D500C26BC6 /* Views */,
 				72F2607726A2CE3600C26BC6 /* ViewControllers */,
@@ -85,6 +97,8 @@
 				72F2606C26A2C82300C26BC6 /* DKArtistViewController.m */,
 				72F2607E26A2CEA900C26BC6 /* DKDrawingsViewController.h */,
 				72F2607F26A2CEA900C26BC6 /* DKDrawingsViewController.m */,
+				72F260AA26A3987600C26BC6 /* DKModalViewController.h */,
+				72F260AB26A3987600C26BC6 /* DKModalViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -94,6 +108,8 @@
 			children = (
 				72F2608526A2E8CB00C26BC6 /* DKDrawingsView.h */,
 				72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */,
+				72ADEBAF26A4B1E900D1B8B8 /* DKPaletteView.h */,
+				72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -103,8 +119,19 @@
 			children = (
 				72F2608C26A2ED1F00C26BC6 /* DKButton.h */,
 				72F2608D26A2ED1F00C26BC6 /* DKButton.m */,
+				72F2609326A34E4600C26BC6 /* DKColor.h */,
+				72F2609426A34E4600C26BC6 /* DKColor.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		72F2609F26A3684C00C26BC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				72F260A126A3686400C26BC6 /* Montserrat-Medium.ttf */,
+				72F260A026A3686400C26BC6 /* Montserrat-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F2609526A34E4600C26BC6 /* DKColor.m in Sources */,
 				72F2608E26A2ED1F00C26BC6 /* DKButton.m in Sources */,
 				72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */,
 				72F2605F26A2C3B600C26BC6 /* main.m in Sources */,
 				72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */,
+				72F260AC26A3987600C26BC6 /* DKModalViewController.m in Sources */,
 				72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */,
+				72ADEBB126A4B1E900D1B8B8 /* DKPaletteView.m in Sources */,
 				72F2605526A2C3B400C26BC6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

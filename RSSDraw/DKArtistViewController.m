@@ -9,11 +9,14 @@
 #import "DKDrawingsViewController.h"
 #import "DKDrawingsView.h"
 #import "DKButton.h"
+#import "DKModalViewController.h"
+#import "DKPaletteView.h"
 
 
 
 
-@interface DKArtistViewController ()
+
+@interface DKArtistViewController () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) DKButton *buttonPalette;
 @property (nonatomic, strong) DKButton *buttonTimer;
@@ -21,6 +24,8 @@
 @property (nonatomic, strong) DKButton *buttonShare;
 
 @property (nonatomic, strong) DKDrawingsView *drawView;
+@property (nonatomic, strong) DKPaletteView *paletteView;
+
 
 
 
@@ -34,21 +39,22 @@
     
     //navigation controller block
     [self.navigationItem setTitle:@"Artist"];
+    
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [UIColor blackColor],NSForegroundColorAttributeName,
+                                    [UIColor whiteColor],NSBackgroundColorAttributeName,nil];
+    
+    self.navigationController.navigationBar.titleTextAttributes = textAttributes;
+
     UIBarButtonItem* drawingsViewBtn = [[UIBarButtonItem alloc] initWithTitle:@"Drawings" style:UIBarButtonItemStylePlain target:self action:@selector(tapOnDrawings:)];
     [self.navigationItem setRightBarButtonItem:drawingsViewBtn];
 
     
-    //view block  (инит можно потом вытнянуть)
+    //view block
     self.drawView = [[DKDrawingsView alloc]initWithFrame:CGRectMake(38, 102, 300, 300)];
-    self.drawView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.drawView];
     
-    //add buttonPalette
-
     
-    
-
-
 
 //MARK: - buttons
     
@@ -109,14 +115,14 @@
                                                                  attribute:NSLayoutAttributeTop
                                                                 multiplier:1
                                                                   constant:454];
-    NSLayoutConstraint *buttonDrawLeftConstraint = [NSLayoutConstraint
+    NSLayoutConstraint *buttonDrawRightConstraint = [NSLayoutConstraint
                                                         constraintWithItem:self.buttonDraw
-                                                                 attribute:NSLayoutAttributeLeft
+                                                                 attribute:NSLayoutAttributeRight
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:self.view
-                                                                 attribute:NSLayoutAttributeLeft
+                                                                 attribute:NSLayoutAttributeRight
                                                                 multiplier:1.0
-                                                                  constant:243];
+                                                                  constant:-41];
     
     //share button
     self.buttonShare = [[DKButton alloc] initWithTitle:@"Share"];
@@ -131,21 +137,30 @@
                                                                  attribute:NSLayoutAttributeTop
                                                                 multiplier:1
                                                                   constant:506];
-    NSLayoutConstraint *buttonShareLeftHeight = [NSLayoutConstraint
+    NSLayoutConstraint *buttonShareRightHeight = [NSLayoutConstraint
                                                         constraintWithItem:self.buttonShare
-                                                                 attribute:NSLayoutAttributeLeft
+                                                                 attribute:NSLayoutAttributeRight
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:self.view
-                                                                 attribute:NSLayoutAttributeLeft
+                                                                 attribute:NSLayoutAttributeRight
                                                                 multiplier:1.0
-                                                                  constant:243];
+                                                                  constant:-41];
 
-    //add button constrains
+    //add buttons constrains
     [self.view addConstraints:@[buttonPalettetTopConstraint, buttonPaletteLeftConstraint,
                                 buttonOpenTimerTopConstraint, buttonOpenTimerLeftConstraint,
-                                buttonDrawTopConstraint, buttonDrawLeftConstraint,
-                                buttonShareHeight, buttonShareLeftHeight]];
+                                buttonDrawTopConstraint, buttonDrawRightConstraint,
+                                buttonShareHeight, buttonShareRightHeight]];
 
+    //add buttons actions
+    [self.buttonPalette addTarget:self action:@selector(paletteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.buttonTimer addTarget:self action:@selector(timerButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.buttonDraw addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.buttonShare addTarget:self action:@selector(shareButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    
 }
 
 
@@ -155,8 +170,29 @@
 -(void)tapOnDrawings:(UIBarButtonItem*)item{
     DKDrawingsViewController *drawingsViewController = [[DKDrawingsViewController alloc] init];
     [[self navigationController] pushViewController:drawingsViewController animated:YES];
-    
 }
+    
+    
+
+-(void)paletteButtonTapped:(UIButton *)sender {
+    DKModalViewController *contentViewController = [[DKModalViewController alloc] init];
+    [self addChildViewController:contentViewController];
+    contentViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    [self.view addSubview:contentViewController.view];
+    [contentViewController didMoveToParentViewController:self];
+    NSLog(@"1");
+}
+-(void)timerButtonTapped:(UIButton *)sender {
+    NSLog(@"2");
+}
+-(void)drawButtonTapped:(UIButton *)sender {
+    NSLog(@"3");
+}
+-(void)shareButtonTapped:(UIButton *)sender {
+    NSLog(@"4");
+}
+
+
 
 
 
