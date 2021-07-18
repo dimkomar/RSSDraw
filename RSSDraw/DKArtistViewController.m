@@ -177,7 +177,7 @@
 -(void)paletteButtonTapped:(UIButton *)sender {
     DKModalViewController *contentViewController = [[DKModalViewController alloc] init];
     [self addChildViewController:contentViewController];
-    contentViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    contentViewController.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
     NSLog(@"1");
