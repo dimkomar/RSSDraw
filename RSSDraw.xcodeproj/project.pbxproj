@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7245059E26A5C80F00004FDD /* DKColorButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7245059D26A5C80F00004FDD /* DKColorButtonView.m */; };
+		724505A226A62E2200004FDD /* DKSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724505A126A62E2200004FDD /* DKSliderView.m */; };
 		72ADEBB126A4B1E900D1B8B8 /* DKPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */; };
+		72ADEBB526A4EE2600D1B8B8 /* DKColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADEBB426A4EE2600D1B8B8 /* DKColorButton.m */; };
 		72F2605526A2C3B400C26BC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2605426A2C3B400C26BC6 /* AppDelegate.m */; };
 		72F2605926A2C3B600C26BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605826A2C3B600C26BC6 /* Assets.xcassets */; };
 		72F2605C26A2C3B600C26BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F2605A26A2C3B600C26BC6 /* LaunchScreen.storyboard */; };
@@ -21,8 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7245059C26A5C80F00004FDD /* DKColorButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKColorButtonView.h; sourceTree = "<group>"; };
+		7245059D26A5C80F00004FDD /* DKColorButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKColorButtonView.m; sourceTree = "<group>"; };
+		724505A026A62E2200004FDD /* DKSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSliderView.h; sourceTree = "<group>"; };
+		724505A126A62E2200004FDD /* DKSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSliderView.m; sourceTree = "<group>"; };
 		72ADEBAF26A4B1E900D1B8B8 /* DKPaletteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPaletteView.h; sourceTree = "<group>"; };
 		72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPaletteView.m; sourceTree = "<group>"; };
+		72ADEBB326A4EE2600D1B8B8 /* DKColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKColorButton.h; sourceTree = "<group>"; };
+		72ADEBB426A4EE2600D1B8B8 /* DKColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKColorButton.m; sourceTree = "<group>"; };
 		72F2605026A2C3B400C26BC6 /* RSSDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F2605326A2C3B400C26BC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72F2605426A2C3B400C26BC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +66,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72ADEBB826A4FBF900D1B8B8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		72F2604726A2C3B400C26BC6 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +92,7 @@
 		72F2605226A2C3B400C26BC6 /* RSSDraw */ = {
 			isa = PBXGroup;
 			children = (
+				72ADEBB826A4FBF900D1B8B8 /* Delegates */,
 				72F2609F26A3684C00C26BC6 /* Fonts */,
 				72F2609026A2ED4900C26BC6 /* Models */,
 				72F2608926A2E8D500C26BC6 /* Views */,
@@ -110,6 +127,10 @@
 				72F2608626A2E8CB00C26BC6 /* DKDrawingsView.m */,
 				72ADEBAF26A4B1E900D1B8B8 /* DKPaletteView.h */,
 				72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */,
+				7245059C26A5C80F00004FDD /* DKColorButtonView.h */,
+				7245059D26A5C80F00004FDD /* DKColorButtonView.m */,
+				724505A026A62E2200004FDD /* DKSliderView.h */,
+				724505A126A62E2200004FDD /* DKSliderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -117,6 +138,8 @@
 		72F2609026A2ED4900C26BC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				72ADEBB326A4EE2600D1B8B8 /* DKColorButton.h */,
+				72ADEBB426A4EE2600D1B8B8 /* DKColorButton.m */,
 				72F2608C26A2ED1F00C26BC6 /* DKButton.h */,
 				72F2608D26A2ED1F00C26BC6 /* DKButton.m */,
 				72F2609326A34E4600C26BC6 /* DKColor.h */,
@@ -203,10 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7245059E26A5C80F00004FDD /* DKColorButtonView.m in Sources */,
 				72F2609526A34E4600C26BC6 /* DKColor.m in Sources */,
 				72F2608E26A2ED1F00C26BC6 /* DKButton.m in Sources */,
 				72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */,
 				72F2605F26A2C3B600C26BC6 /* main.m in Sources */,
+				72ADEBB526A4EE2600D1B8B8 /* DKColorButton.m in Sources */,
+				724505A226A62E2200004FDD /* DKSliderView.m in Sources */,
 				72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */,
 				72F260AC26A3987600C26BC6 /* DKModalViewController.m in Sources */,
 				72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */,

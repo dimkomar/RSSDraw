@@ -22,9 +22,13 @@
 @property (nonatomic, strong) DKButton *buttonTimer;
 @property (nonatomic, strong) DKButton *buttonDraw;
 @property (nonatomic, strong) DKButton *buttonShare;
+@property (nonatomic, strong) DKButton *buttonSave;
+
 
 @property (nonatomic, strong) DKDrawingsView *drawView;
 @property (nonatomic, strong) DKPaletteView *paletteView;
+
+@property (nonatomic, strong) DKModalViewController *contentViewController;
 
 
 
@@ -175,14 +179,17 @@
     
 
 -(void)paletteButtonTapped:(UIButton *)sender {
-    DKModalViewController *contentViewController = [[DKModalViewController alloc] init];
+    DKModalViewController *contentViewController = [[DKModalViewController alloc] init:@"1"];
     [self addChildViewController:contentViewController];
-    contentViewController.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
     NSLog(@"1");
 }
 -(void)timerButtonTapped:(UIButton *)sender {
+    DKModalViewController *contentViewController = [[DKModalViewController alloc] init:@"2"];
+    [self addChildViewController:contentViewController];
+    [self.view addSubview:contentViewController.view];
+    [contentViewController didMoveToParentViewController:self];
     NSLog(@"2");
 }
 -(void)drawButtonTapped:(UIButton *)sender {

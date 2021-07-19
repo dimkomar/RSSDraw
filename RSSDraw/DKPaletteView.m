@@ -14,6 +14,7 @@
     if (self) {
         self.layer.cornerRadius = 8;
         [self.layer setBackgroundColor:[[UIColor blackColor] CGColor]];
+        [self.layer setShadowColor:[[UIColor blackColor] CGColor]];
     }
     return self;
 }

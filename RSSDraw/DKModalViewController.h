@@ -6,13 +6,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKButton.h"
+#import "DKColorButtonView.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DKModalViewController : UIViewController
-/*
--(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController andTintColor:(UIColor *)aTintColor;
-*/
+
+@property (nonatomic, strong) DKButton *save;
+@property (nonatomic, strong) NSString* setModalViewPresentation;
+@property (nonatomic, strong) NSMutableString* timerValue;
+@property (nonatomic, strong) UILabel *resultValue;
+
+-(id)init:(NSString *) param;
 
 @end
 

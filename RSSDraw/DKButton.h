@@ -6,13 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKColor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DKButton : UIButton
 
 -(instancetype)initWithTitle:(NSString *)title;
+-(instancetype)initWithColor:(UIColor *)color;
 -(void)setHighlighted:(BOOL)highlighted;
+-(void)setHighlightedColorButton;
+-(void)setDefaultColorButton:(UIColor *)color;
+
 
 @end
 
