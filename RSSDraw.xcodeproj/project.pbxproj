@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7245059E26A5C80F00004FDD /* DKColorButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7245059D26A5C80F00004FDD /* DKColorButtonView.m */; };
-		724505A226A62E2200004FDD /* DKSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724505A126A62E2200004FDD /* DKSliderView.m */; };
 		724505A726A7315D00004FDD /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72F260A026A3686400C26BC6 /* Montserrat-Regular.ttf */; };
 		724505A926A7316200004FDD /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72F260A126A3686400C26BC6 /* Montserrat-Medium.ttf */; };
 		72ADEBB126A4B1E900D1B8B8 /* DKPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */; };
@@ -28,8 +27,6 @@
 /* Begin PBXFileReference section */
 		7245059C26A5C80F00004FDD /* DKColorButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKColorButtonView.h; sourceTree = "<group>"; };
 		7245059D26A5C80F00004FDD /* DKColorButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKColorButtonView.m; sourceTree = "<group>"; };
-		724505A026A62E2200004FDD /* DKSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSliderView.h; sourceTree = "<group>"; };
-		724505A126A62E2200004FDD /* DKSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSliderView.m; sourceTree = "<group>"; };
 		724505A426A642CD00004FDD /* DKViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewDelegate.h; sourceTree = "<group>"; };
 		72ADEBAF26A4B1E900D1B8B8 /* DKPaletteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPaletteView.h; sourceTree = "<group>"; };
 		72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPaletteView.m; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				72ADEBB026A4B1E900D1B8B8 /* DKPaletteView.m */,
 				7245059C26A5C80F00004FDD /* DKColorButtonView.h */,
 				7245059D26A5C80F00004FDD /* DKColorButtonView.m */,
-				724505A026A62E2200004FDD /* DKSliderView.h */,
-				724505A126A62E2200004FDD /* DKSliderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -238,7 +233,6 @@
 				72F2608726A2E8CB00C26BC6 /* DKDrawingsView.m in Sources */,
 				72F2605F26A2C3B600C26BC6 /* main.m in Sources */,
 				72ADEBB526A4EE2600D1B8B8 /* DKColorButton.m in Sources */,
-				724505A226A62E2200004FDD /* DKSliderView.m in Sources */,
 				72F2606D26A2C82300C26BC6 /* DKArtistViewController.m in Sources */,
 				72F260AC26A3987600C26BC6 /* DKModalViewController.m in Sources */,
 				72F2608026A2CEA900C26BC6 /* DKDrawingsViewController.m in Sources */,

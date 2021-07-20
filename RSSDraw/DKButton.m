@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         [self setFrame:CGRectMake(222, 222, 222, 222)]; //defaul size
-        [self.titleLabel setFont: [UIFont fontWithName:@"Montserrat-Medium" size:18]];
+        [self.titleLabel setFont: [UIFont fontWithName:@"Montserrat-Medium" size:18.0f]];
         [self setTitle:title forState:UIControlStateNormal];
         [self setTitleColor:[UIColor lightGreenSea] forState:UIControlStateNormal];
         [self.layer setBackgroundColor:[[UIColor whiteColor] CGColor]];

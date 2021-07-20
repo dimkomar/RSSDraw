@@ -19,8 +19,8 @@
         [self.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
         [self.layer setShadowRadius:4.25];
         [self.layer setShadowOpacity:0.25];
-        _button = [[DKColorButton alloc] initWithColor:color];
-        [self addSubview:_button];
+        self.button = [[DKColorButton alloc] initWithColor:color];
+        [self addSubview:self.button];
     }
     return self;
 }
