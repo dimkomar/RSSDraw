@@ -23,109 +23,9 @@
 -(id)init{
     self = [super init];
     if(self) {
-        
-        //planet
-        self.buttonPlanet = [[DKButton alloc] initWithTitle:@"Planet"];
-        [self.buttonPlanet setFrame:CGRectMake(0, 0, 200, 40)];
-        self.buttonPlanet.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:self.buttonPlanet];
-        
-        
-        NSLayoutConstraint *buttonPlanetTopConstraint = [NSLayoutConstraint
-                                                            constraintWithItem:self.buttonPlanet
-                                                                     attribute:NSLayoutAttributeTop
-                                                                     relatedBy:NSLayoutRelationEqual
-                                                                        toItem:self.view
-                                                                     attribute:NSLayoutAttributeTop
-                                                                    multiplier:1
-                                                                      constant:114];
-        NSLayoutConstraint *buttonPlanetLeftConstraint = [NSLayoutConstraint
-                                                            constraintWithItem:self.buttonPlanet
-                                                                     attribute:NSLayoutAttributeLeft
-                                                                     relatedBy:NSLayoutRelationEqual
-                                                                        toItem:self.view
-                                                                     attribute:NSLayoutAttributeLeft
-                                                                    multiplier:1.0
-                                                                      constant:88];
-        
-     
-     //head
-        self.buttonHead = [[DKButton alloc] initWithTitle:@"Head"];
-        self.buttonHead.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:self.buttonHead];
-     
-     NSLayoutConstraint *buttonHeadTopConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonHead
-                                                                  attribute:NSLayoutAttributeTop
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeTop
-                                                                 multiplier:1
-                                                                   constant:169];
-     NSLayoutConstraint *buttonHeadLeftConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonHead
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                 multiplier:1.0
-                                                                   constant:88];
-     //tree
-        self.buttonTree = [[DKButton alloc] initWithTitle:@"Tree"];
-        self.buttonTree.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:self.buttonTree];
-     
-     NSLayoutConstraint *buttonTreeTopConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonTree
-                                                                  attribute:NSLayoutAttributeTop
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeTop
-                                                                 multiplier:1
-                                                                   constant:224];
-     NSLayoutConstraint *buttonTreeLeftConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonTree
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                 multiplier:1.0
-                                                                   constant:88];
-     //landscape
-        self.buttonLandscape = [[DKButton alloc] initWithTitle:@"Landscape"];
-        self.buttonLandscape.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:self.buttonLandscape];
-     
-     NSLayoutConstraint *buttonLandscapeTopConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonLandscape
-                                                                  attribute:NSLayoutAttributeTop
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeTop
-                                                                 multiplier:1
-                                                                   constant:279];
-     NSLayoutConstraint *buttonLandscapeLeftConstraint = [NSLayoutConstraint
-                                                         constraintWithItem:self.buttonLandscape
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:self.view
-                                                                  attribute:NSLayoutAttributeLeft
-                                                                 multiplier:1.0
-                                                                   constant:88];
-     
-     //add buttons constrains
-        [self.view addConstraints:@[buttonPlanetTopConstraint, buttonPlanetLeftConstraint,
-                                    buttonHeadTopConstraint, buttonHeadLeftConstraint,
-                                    buttonTreeTopConstraint, buttonTreeLeftConstraint,
-                                    buttonLandscapeTopConstraint, buttonLandscapeLeftConstraint]];
-
-     //add buttons actions
-     [self.buttonPlanet addTarget:self action:@selector(buttonPlanetTapped:) forControlEvents:UIControlEventTouchUpInside];
-     [self.buttonHead addTarget:self action:@selector(buttonHeadTapped:) forControlEvents:UIControlEventTouchUpInside];
-     [self.buttonTree addTarget:self action:@selector(buttonTreeTapped:) forControlEvents:UIControlEventTouchUpInside];
-     [self.buttonLandscape addTarget:self action:@selector(buttonLandscapeTapped:) forControlEvents:UIControlEventTouchUpInside];
-     
-        
+        self.view.backgroundColor = [UIColor whiteColor];
+        [self setupButtons];
+       
     }
 return self;
 }
@@ -133,6 +33,40 @@ return self;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setTitle:@"Drawings"];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+-(void)setupButtons{
+    //planet
+    self.buttonPlanet = [[DKButton alloc] initWithTitle:@"Planet"];
+    [self.buttonPlanet setFrame:CGRectMake(88, 114, 200, 40)];
+    [self.view addSubview:self.buttonPlanet];
+ 
+ //head
+    self.buttonHead = [[DKButton alloc] initWithTitle:@"Head"];
+    [self.buttonHead setFrame:CGRectMake(88, 169, 200, 40)];
+    [self.view addSubview:self.buttonHead];
+
+ //tree
+    self.buttonTree = [[DKButton alloc] initWithTitle:@"Tree"];
+    [self.buttonTree setFrame:CGRectMake(88, 224, 200, 40)];
+    [self.view addSubview:self.buttonTree];
+ 
+ //landscape
+    self.buttonLandscape = [[DKButton alloc] initWithTitle:@"Landscape"];
+    [self.buttonLandscape setFrame:CGRectMake(88, 279, 200, 40)];
+    [self.view addSubview:self.buttonLandscape];
+
+ //add buttons actions
+ [self.buttonPlanet addTarget:self action:@selector(buttonPlanetTapped:) forControlEvents:UIControlEventTouchUpInside];
+ [self.buttonHead addTarget:self action:@selector(buttonHeadTapped:) forControlEvents:UIControlEventTouchUpInside];
+ [self.buttonTree addTarget:self action:@selector(buttonTreeTapped:) forControlEvents:UIControlEventTouchUpInside];
+ [self.buttonLandscape addTarget:self action:@selector(buttonLandscapeTapped:) forControlEvents:UIControlEventTouchUpInside];
+ 
     
 }
 

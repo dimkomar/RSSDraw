@@ -11,9 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKDrawingsView : UIView
 
-@property (strong, nonatomic) NSMutableArray <UIButton *> *colorPalette;
-@property (assign, nonatomic) NSNumber *drawingItem;
-
+@property (assign, nonatomic) NSNumber *drawItemNumber;
 
 @end
 

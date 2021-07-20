@@ -186,7 +186,7 @@
     [self.timerView didMoveToParentViewController:self];
 }
 -(void)drawButtonTapped:(UIButton *)sender {
-    NSLog(@"3");
+  //  [self.drawView.drawItemNumber setNeedsDisplay];
 }
 -(void)shareButtonTapped:(UIButton *)sender {
     NSArray* sharedObjects=[NSArray arrayWithObjects:@"sharecontent",  nil];
