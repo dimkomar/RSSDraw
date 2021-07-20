@@ -7,37 +7,24 @@
 
 #import "AppDelegate.h"
 #import "DKArtistViewController.h"
-#import "DKDrawingsViewController.h"
-
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    //create nc
-    UINavigationController *nc = [[UINavigationController alloc] init];
-
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-
-
     //create root view controller
-    DKArtistViewController *artistViewController = [[DKArtistViewController alloc] init];
-
-    [nc setViewControllers:[NSArray arrayWithObject:artistViewController]];
-
+    UIViewController *artistViewController = [[DKArtistViewController alloc] init];
+    //create nc
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:artistViewController];
     [self.window setRootViewController:nc];
-            
-
+    [self.window makeKeyAndVisible];
     return YES;
 }
-
-
 
 @end

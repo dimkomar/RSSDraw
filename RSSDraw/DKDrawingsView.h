@@ -11,7 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKDrawingsView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame;
+@property (strong, nonatomic) NSMutableArray <UIButton *> *colorPalette;
+@property (assign, nonatomic) NSNumber *currentDrawing;
+
 
 @end
 

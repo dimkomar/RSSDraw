@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* setModalViewPresentation;
 @property (nonatomic, strong) NSMutableString* timerValue;
 @property (nonatomic, strong) UILabel *resultValue;
+@property (nonatomic, strong) NSMutableString *palleteOrTimer;
+
 
 -(id)init:(NSString *) param;
 

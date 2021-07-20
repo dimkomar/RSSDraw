@@ -14,7 +14,7 @@
 -(instancetype)initWithTitle:(NSString *)title {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0, 0, 156, 42); //defaul size
+        [self setFrame:CGRectMake(222, 222, 222, 222)]; //defaul size
         [self.titleLabel setFont: [UIFont fontWithName:@"Montserrat-Medium" size:18]];
         [self setTitle:title forState:UIControlStateNormal];
         [self setTitleColor:[UIColor lightGreenSea] forState:UIControlStateNormal];
@@ -27,7 +27,6 @@
         [self.layer setShadowOpacity:0.2];
         self.layer.cornerRadius = 10.0;
         self.contentEdgeInsets = UIEdgeInsetsMake(5, 21, 5, 21);
-        [self clipsToBounds];
     }
     return self;
 }
@@ -47,7 +46,6 @@
 -(instancetype)initWithColor:(UIColor *)color {
     self = [super init];
     if (self) {
-        [self.layer setBackgroundColor:[[UIColor greenColor] CGColor]];
         [self setFrame:CGRectMake(8, 8, 24, 24)];
         [self.layer setCornerRadius:10.0f];
         [self.layer setShadowOffset:CGSizeMake(0, 0)];
